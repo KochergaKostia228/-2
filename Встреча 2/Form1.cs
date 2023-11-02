@@ -6,5 +6,23 @@ namespace Встреча_2
         {
             InitializeComponent();
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DateTime start = DateTime.Parse(DTStart.Text);
+            DateTime end = DateTime.Parse(DTEnd.Text);
+            double days = (end - start).TotalDays;
+            label1.Text = days.ToString() + " days";
+        }
     }
 }
